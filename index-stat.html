@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Hello, world!</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="css/fontello.css">
+	<link rel="stylesheet" type="text/css" href="css/front.css">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+</head>
+<body>
+<!-- Верхне меню -->
+<section class="top-menu">
+	<div class="container">
+		<div class="row align-items-center justify-content-center justify-content-sm-start">
+			<!-- logo -->
+			<div class="col-auto">
+				<div class="logo"><a href="/"><img src="img/logo.png"></a></div>
+			</div>
+			<!-- меню и вход -->
+			<div class="col">
+				<div class="row justify-content-center justify-content-sm-end align-items-center no-gutters">
+					<div class="col-auto main-menu-col">
+						<button class="burger"><span></span><span></span><span></span></button>
+						<nav class="main-menu">
+							<ul>
+								<li><a href="">Главная</a></li>
+								<li class="active"><a href="">Статистика</a></li>
+								<li><a href="">Магазин</a></li>
+								<li><a href="">Обмен</a></li>
+								<li><a href="">Партнерам</a></li>
+								<li><a href="">О нас</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-auto">
+						<div class="panel-on">
+							<div class="login-in">
+								<a href="#" class="link-login-in"><img src="img/face.png"></a>
+							</div>
+							<div class="panel-on-p">
+								<ul>
+									<li><a href="#"><span>Профиль</span></a></li>
+									<li><a href="#"><span>Выйти</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--
+шапка сайта будет иметь два класса
+ * для главной main-head
+ * для остальных cont
+ * ну и собственно содержимое header то же будет отличаться на главной и остальных
+ -->
+<section class="cont">
+	<header class="container">
+		<div class="row line-panel align-items-center">
+			<div class="col-12  col-md-3 cont-coin">
+				<img src="img/coin-in.png">
+			</div>
+			<div class="col-12 col-sm-12 col-md-9 col-lg-7 col-xl-6 panel-in">
+				<div class="row no-gutters">
+					<div class="col-8">
+						<div class="row no-gutters">
+							<div class="col panel-hello">Здравствуйте Сергей у&nbsp;Вас Icoin:</div>
+							<div class="col panel-all-coin">5000</div>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="basket-all">
+							<div class="basket-t">
+								<span class="basket-t-l"><span>товаров:</span><span>5</span></span>
+								<span class="basket-t-l"><span>сумма:</span><span>3000</span></span>
+							</div>
+							<div class="basket-b"><a href=""><span class="icon-basket"></span></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+</section>
+<!-- Контент -->
+<section class="content">
+	<div class="container">
+		<div class="row">
+			<!-- Собственно блок самого содержимого -->
+			<div class="col-12 col-lg order-lg-1">
+				<div class="content-os">
+					<!-- Графики -->
+					<div class="row justify-content-center">
+						<!--Колонка Шаги -->
+						<div class="graph col col-md-6 col-xl-4">
+							<header class="cart-h">
+								<h2>Шаги</h2>
+							</header>
+							<div class="chart-container">
+								<canvas id="chartStep"></canvas>
+							</div>
+							<script>
+								var dataStep = {
+									labels: ["01.02.18", "02.02.18", "03.02.18", "04.02.18", "05.02.18", "06.02.18", "07.02.18", "07.02.18", "08.02.18", "09.02.18", "10.02.18"],
+									datasets: [{
+										label: "Шаги",
+										data: [200, 315, 500, 200, 150, 300, 450, 550, 600, 300, 200],
+										backgroundColor: "rgba(23,127,244,1)",
+										borderColor: "rgba(23,127,244,1)",
+										borderWidth: 2,
+										fill: false,
+										pointRadius: 5,
+										pointHoverRadius: 10,
+										lineTension: 0,
+									}]
+								};
+
+								var optionsStep = {
+									maintainAspectRatio: false,
+									legend: {
+										display: false
+									},
+									scales: {
+										yAxes: [{
+											stacked: true,
+											gridLines: {
+												display: true,
+												color: "rgba(30,30,30,0.2)"
+											}
+										}],
+										xAxes: [{
+											gridLines: {
+												display: false
+											}
+										}]
+									}
+								};
+
+								Chart.Line('chartStep', {
+									options: optionsStep,
+									data: dataStep
+								});
+							
+							</script>
+						</div>
+						<!--Колонка Степкойны -->
+						<div class="graph col col-md-6 col-xl-4">
+							<header class="cart-h">
+								<h2>Icoin</h2>
+							</header>
+							<div class="chart-container">
+								<canvas id="chartStepCoin"></canvas>
+							</div>
+							<script>
+								var dataStepCoin = {
+									labels: ["01.02.18", "02.02.18", "03.02.18", "04.02.18", "05.02.18", "06.02.18", "07.02.18", "07.02.18", "08.02.18", "09.02.18", "10.02.18"],
+									datasets: [{
+										label: "Icoin",
+										data: [200, 315, 500, 200, 150, 300, 450, 550, 600, 300, 200],
+										backgroundColor: "rgba(23,127,244,1)",
+										borderColor: "rgba(23,127,244,1)",
+										borderWidth: 2,
+										fill: false,
+										pointRadius: 5,
+										pointHoverRadius: 10,
+										lineTension: 0,
+									}]
+								};
+
+								var optionsStepCoin = {
+									maintainAspectRatio: false,
+									legend: {
+										display: false
+									},
+									scales: {
+										yAxes: [{
+											stacked: true,
+											gridLines: {
+												display: true,
+												color: "rgba(30,30,30,0.2)"
+											}
+										}],
+										xAxes: [{
+											gridLines: {
+												display: false
+											}
+										}]
+									}
+								};
+
+								Chart.Line('chartStepCoin', {
+									options: optionsStepCoin,
+									data: dataStepCoin
+								});
+							
+							</script>
+						</div>
+						<!--Колонка Степкойны -->
+						<div class="graph col col-md-6 col-xl-4">
+							<header class="cart-h">
+								<h2>Калории</h2>
+							</header>
+							<div class="chart-container">
+								<canvas id="chartCalories"></canvas>
+							</div>
+							<script>
+								var dataCalories = {
+									labels: ["01.02.18", "02.02.18", "03.02.18", "04.02.18", "05.02.18", "06.02.18", "07.02.18", "07.02.18", "08.02.18", "09.02.18", "10.02.18"],
+									datasets: [{
+										label: "Калории",
+										data: [200, 315, 500, 200, 150, 300, 450, 550, 600, 300, 200],
+										backgroundColor: "rgba(23,127,244,1)",
+										borderColor: "rgba(23,127,244,1)",
+										borderWidth: 2,
+										fill: false,
+										pointRadius: 5,
+										pointHoverRadius: 10,
+										lineTension: 0,
+									}]
+								};
+
+								var optionsCalories= {
+									maintainAspectRatio: false,
+									legend: {
+										display: false
+									},
+									scales: {
+										yAxes: [{
+											stacked: true,
+											gridLines: {
+												display: true,
+												color: "rgba(30,30,30,0.2)"
+											}
+										}],
+										xAxes: [{
+											gridLines: {
+												display: false
+											}
+										}]
+									}
+								};
+
+								Chart.Line('chartCalories', {
+									options: optionsCalories,
+									data: dataCalories
+								});
+							
+							</script>
+						</div>
+					</div>
+					<!-- Результаті -->
+					<ul class="resulticoin">
+						<li><h4>Лучший результат за месяц в Вашей возрастной категории: <strong>154 099</strong> шагов</h4></li>
+						<li><h4>Лучшее накопление степкойнов за месяц: <strong>98345</strong> Icoin</h4></li>
+						<li><h4>Количество приобретений в степкойн – магазине: <strong>4587</strong> покупок</h4></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-lg-3 order-lg-0">
+				<div class="reklama"><a href="#"><img src="img/r-b.jpg"></a></div>
+			</div>
+			<div class="col-12 col-sm-6 col-lg-1 order-lg-2">
+				<div class="row">
+					<div class="col-6 col-sm-6 col-md-6 col-lg-12">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-12">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-12">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-12">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-12">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-12">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-12">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-12">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-12">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-12">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!--Подвал -->
+<section class="footer container-fluid">
+	<footer class="row justify-content-center align-items-center">
+		<div class="col-auto"> © Copyrayt 2018</div>
+	</footer>
+</section>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/front.js"></script>
+</body>
+</html>

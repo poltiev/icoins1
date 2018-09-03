@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Hello, world!</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="css/fontello.css">
+	<link rel="stylesheet" type="text/css" href="css/front.css">
+	
+	<script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+	<script src="js/liquidFillGauge.js" language="JavaScript"></script>
+
+</head>
+<body>
+<!-- Верхне меню -->
+<section class="top-menu">
+	<div class="container">
+		<div class="row align-items-center justify-content-center justify-content-sm-start">
+			<!-- logo -->
+			<div class="col-auto">
+				<div class="logo"><a href="/"><img src="img/logo.png"></a></div>
+			</div>
+			<!-- меню и вход -->
+			<div class="col">
+				<div class="row justify-content-center justify-content-sm-end align-items-center no-gutters">
+					<div class="col-auto main-menu-col">
+						<button class="burger"><span></span><span></span><span></span></button>
+						<nav class="main-menu">
+							<ul>
+								<li><a href="">Главная</a></li>
+								<li><a href="">Статистика</a></li>
+								<li><a href="">Магазин</a></li>
+								<li><a href="">Обмен</a></li>
+								<li><a href="">Партнерам</a></li>
+								<li><a href="">О нас</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-auto">
+						<div class="panel-on">
+							<div class="login-in">
+								<a href="#" class="link-login-in"><img src="img/face.png"></a>
+							</div>
+							<div class="panel-on-p">
+								<ul>
+									<li><a href="#"><span>Профиль</span></a></li>
+									<li><a href="#"><span>Выйти</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--
+шапка сайта будет иметь два класса
+ * для главной main-head
+ * для остальных cont
+ * ну и собственно содержимое header то же будет отличаться на главной и остальных
+ -->
+<section class="cont">
+	<header class="container">
+		<div class="row line-panel align-items-center">
+			<div class="col-12  col-md-3 cont-coin">
+				<img src="img/coin-in.png">
+			</div>
+			<div class="col-12 col-sm-12 col-md-9 col-lg-7 col-xl-6 panel-in">
+				<div class="row no-gutters">
+					<div class="col-8">
+						<div class="row no-gutters">
+							<div class="col panel-hello">Здравствуйте Сергей у&nbsp;Вас Футткойнов:</div>
+							<div class="col panel-all-coin">5000</div>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="basket-all">
+							<div class="basket-t">
+								<span class="basket-t-l"><span>товаров:</span><span>5</span></span>
+								<span class="basket-t-l"><span>сумма:</span><span>3000</span></span>
+							</div>
+							<div class="basket-b"><a href=""><span class="icon-basket"></span></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+</section>
+<!-- Контент -->
+<section class="content">
+	<div class="container">
+		<div class="row">
+			<!-- Собственно блок самого содержимого -->
+			<div class="col-12 col-lg order-lg-1">
+				<article class="content-os">
+					<header>
+						<h1>Редактирование профиля</h1>
+					</header>
+					<div>
+						<form class="in-form">
+							<div class="line-form">
+								<input name="surname" class="input-in" type="text" placeholder="Фамилия">
+							</div>
+							<div class="line-form">
+								<input name="name" class="input-in" type="text" placeholder="Имя">
+							</div>
+							<div class="line-form">
+								<input name="patronymic" class="input-in" type="text" placeholder="Фамилия">
+							</div>
+							<div class="line-form">
+								<input name="nickname" class="input-in" type="text" placeholder="Никнейм">
+							</div>
+							<div class="line-form">
+								<input name="sex" class="input-in" type="text" placeholder="Пол">
+							</div>
+							<div class="line-form">
+								<input name="age" class="input-in" type="text" placeholder="Возраст">
+							</div>
+							<div class="line-form">
+								<input name="address" class="input-in" type="text" placeholder="Ваш адрес">
+							</div>
+							<div class="line-form">
+								<input name="phone" class="input-in" type="text" placeholder="Ваш телефон">
+							</div>
+							<div class="line-form">
+								<input name="email" class="input-in" type="email" placeholder="E-mail или номер телефона">
+							</div>
+							<div class="line-form">
+								<input name="phone" class="input-in" type="text" placeholder="Ваш телефон">
+							</div>
+							<div class="line-form">
+								<input name="word" class="input-in" type="text" placeholder="Секретное слово для участия в конкурса и икциях">
+							</div>
+							<div class="line-form row-line">
+								<div>
+									<input name="check" id="check" class="input-check" type="checkbox">
+									<label for="check" class="label-check"><span>Хотите получать информацию о новинках?
+</span></label>
+								</div>
+							</div>
+							<div class="line-form row-line">
+								<div>
+									<input name="check1" id="check1" class="input-check" type="checkbox">
+									<label for="check1" class="label-check"><span>Заполнить позже</span></label>
+								</div>
+							</div>
+							<div class="line-form">
+								<input name="sub" class="input-submit" type="submit" value="Сохранить">
+							</div>
+						</form>
+					</div>
+				</article>
+			</div>
+			<div class="col-12 col-sm-6 col-lg-3 order-lg-0">
+				<div class="reklama"><a href="#"><img src="img/r-b.jpg"></a></div>
+			</div>
+			<div class="col-12 col-sm-6 col-lg-3 order-lg-2">
+				<div class="row">
+					<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+						<div class="reklama"><a href="#"><img src="img/r-sm.jpg"></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!--Подвал -->
+<section class="footer container-fluid">
+	<footer class="row justify-content-center align-items-center">
+		<div class="col-auto"> © Copyrayt 2018</div>
+	</footer>
+</section>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/front.js"></script>
+</body>
+</html>
