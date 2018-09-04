@@ -918,3 +918,6 @@ a .icon-basket:before {
 	background-color: var(--light-bg);
 }
 /*nnn*/
+.myclass {
+	text-emphasis: #0cdd36;
+}
